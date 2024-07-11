@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Masa Wiki",
   description: "All Masa's Mods\nAll In One Place",
-  base: '/masa-wiki-demo/',
+  base: '/Masa-Wiki/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
