@@ -12,7 +12,7 @@ features:
     icon:
       src: /logos/malilib-white.svg
       width: '180'
-    link: /
+    link: /malilib/
   - title: Litematica
     icon:
       src: /logos/litematica-white.svg
@@ -22,59 +22,34 @@ features:
     icon:
       src: /logos/tweakeroo-white.svg
       width: '180'
-    link: /
+    link: /tweakeroo/
   - title: Mini HUD
     icon:
       src: /logos/minihud-white.svg
       width: '180'
-    link: /
+    link: /mini-hud/
   - title: Item Scroller
     icon:
       src: /logos/itemscroller-white.svg
       width: '180'
-    link: /
+    link: /item-scroller/
 ---
-
-<div class="vid-container">
-  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-</div>
-
 
 <style>
 
-.vid-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-
-/* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.items > .item.grid-4 {
+body.home .items > .item.grid-4 {
     width: calc(100% / 5);
   }
 
-body.home #VPContent > div > div.VPFeatures.VPHomeFeatures > div > div > div > a > article > h2 {
+body.home a.VPFeature h2.title {
   font-size: 24px;
-  color: white;
   margin: auto;
   padding-top: 20px;
   text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
               rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-#VPContent > div > div.VPFeatures.VPHomeFeatures > div > div > div > a {
-  border: 4px solid #3b3d45;
+body.home a.VPFeature[href*="Masa-Wiki"] {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
               rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -82,9 +57,55 @@ body.home #VPContent > div > div.VPFeatures.VPHomeFeatures > div > div > div > a
   transition: all .2s ease-in-out;
 }
 
-#VPContent > div > div.VPFeatures.VPHomeFeatures > div > div > div > a:hover  {
+body.home a.VPFeature.link[href*="Masa-Wiki"]:hover {
   transform: scale(1.1);
   cursor: pointer;
+  border-color: inherit;
+}
+
+body.home a.VPFeature.link[href*="malilib"] {
+  border: 4px solid var(--vp-c-malilib-soft);
+  color: var(--vp-c-malilib-base);
+}
+
+body.home a.VPFeature.link[href*="malilib"]:hover {
+  border-color: var(--vp-c-malilib-dark);
+}
+
+body.home a.VPFeature.link[href*="litematica"] {
+  border: 4px solid var(--vp-c-litematica-soft);
+  color: var(--vp-c-litematica-base);
+}
+
+body.home a.VPFeature.link[href*="litematica"]:hover {
+  border-color: var(--vp-c-litematica-dark);
+}
+
+body.home a.VPFeature.link[href*="tweakeroo"] {
+  border: 4px solid var(--vp-c-tweakeroo-soft);
+  color: var(--vp-c-tweakeroo-base);
+}
+
+body.home a.VPFeature.link[href*="tweakeroo"]:hover {
+  border: 4px solid var(--vp-c-tweakeroo-dark);
+}
+
+body.home a.VPFeature.link[href*="mini-hud"] {
+  border: 4px solid var(--vp-c-minihud-soft);
+  color: var(--vp-c-minihud-base);
+}
+
+body.home a.VPFeature.link[href*="mini-hud"]:hover {
+  border: 4px solid var(--vp-c-minihud-dark);
+}
+
+body.home a.VPFeature.link[href*="item-scroller"] {
+  border: 4px solid var(--vp-c-itemscroller-soft);
+  color: var(--vp-c-itemscroller-base);
+}
+
+body.home a.VPFeature.link[href*="iteam-scroller"]:hover {
+  border: 4px solid var(--vp-c-itemscroller-dark);
 }
 
 </style>
