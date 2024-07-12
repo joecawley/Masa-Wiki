@@ -25,7 +25,7 @@ export default {
     };
     const updateBodyClass = () => {
       const pathSegments= route.path.split('/').filter(Boolean);
-      const rootFolder = pathSegments.length > 0 ? pathSegments[0]: 'home';
+      const rootFolder = pathSegments.length > 1 ? pathSegments[1]: 'home';
       document.body.className = rootFolder;
     }
     onMounted(() => {
