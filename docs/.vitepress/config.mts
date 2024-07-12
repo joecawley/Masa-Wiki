@@ -25,8 +25,16 @@ export default defineConfig({
 
     sidebar: {
       'malilib/': [
-        { text: 'Home', link: '/malilib/'
-        }
+        { text: 'MaLiLib',
+          items: [
+            { text: 'Configuration',
+              base: 'malilib/configuration/',
+              items: [
+                { text: 'Generic', link: 'generic.md'}
+              ]
+            }
+          ]
+        },
       ],
       'litematica/': [
         { text: 'Litematica',
@@ -68,37 +76,57 @@ export default defineConfig({
         }
       ],
       'tweakeroo/': [
-        { text: 'Tweakeroo Home', link: '/tweakeroo/'},
-        { text: 'Getting Started',
-          base: 'tweakeroo/getting-started/',
+        { text: 'Tweakeroo',
           items: [
-            { text: 'Installation', link: 'installation'}
+            { text: 'Configuration',
+              base: 'tweakeroo/configuration/',
+              items: [
+                { text: 'Generic', link: 'generic.md'},
+                { text: 'Fixes', link: 'fixes.md'},
+                { text: 'Lists', link: 'lists.md'},
+                { text: 'Tweaks', link: 'tweaks.md'},
+                { text: 'Hotkeys', link: 'hotkeys.md'},
+                { text: 'Yeets', link: 'yeets.md'}
+              ]
+            }
           ]
         },
-        { text: 'Configuration',
-          base: 'tweakeroo/configuration/',
-          items: [
-            { text: 'Generic', link: 'generic.md'},
-            { text: 'Fixes', link: 'fixes.md'},
-            { text: 'Lists', link: 'lists.md'},
-            { text: 'Tweaks', link: 'tweaks.md'},
-            { text: 'Hotkeys', link: 'hotkeys.md'},
-            { text: 'Yeets', link: 'yeets.md'}
-          ]
-        }
       ],
       'minihud/': [
-        { text: 'Home', link: '/minihud/'
-        }
+        { text: 'Mini HUD',
+          items: [
+            { text: 'Configuration',
+              base: 'minihud/configuration/',
+              items: [
+                { text: 'Generic', link: 'generic.md'},
+                { text: 'Colors', link: 'colors.md'},
+                { text: 'Info Lines', link: 'info-lines.md'},
+                { text: 'Structures', link: 'structures.md'},
+                { text: 'Renderers', link: 'renderers.md'},
+                { text: 'Shapes', link: 'shapes.md'}
+              ]
+            }
+          ]
+        },
       ],
-      'itemscroller/': [
-        { text: 'Home', link: '/itemscroller/'
-        }
+      'item-scroller/': [
+        { text: 'Item Scroller',
+          items: [
+            { text: 'Configuration',
+              base: 'item-scroller/configuration/',
+              items: [
+                { text: 'Generic', link: 'generic.md'},
+                { text: 'Toggles', link: 'toggles.md'},
+                { text: 'Hotkeys', link: 'hotkeys.md'}
+              ]
+            }
+          ]
+        },
       ]
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/maruohon' }
     ]
   }
 })

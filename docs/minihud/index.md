@@ -1,14 +1,14 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: MaLiLib
+title: Mini HUD
 
 hero:
-  name: "MaLiLib"
-  text: "masa Mod Library"
-  tagline: MaLiLib is a library mod required for all of Masa's mods to function.
+  name: "Mini HUD"
+  text: "The Powerful Minimalist HUD"
+  tagline: MiniHUD is a client-side information and overlay rendering mod with tons of configuration. From quick glance text info to structure box and shape rendering.
   image: 
-     src: /malilib/malilib-color.png
+     src: /minihud/minihud-color.png
 
 features:
   - icon: ❓
@@ -22,5 +22,5 @@ features:
   - icon: 🛠
     title: Configuration
     details: See all configuration options with descriptions and some exmaples.
-    link: "./configuration/generic"
+    link: "./configuration/generic" 
 ---

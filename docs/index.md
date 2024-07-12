@@ -27,7 +27,7 @@ features:
     icon:
       src: /logos/minihud-white.svg
       width: '180'
-    link: /mini-hud/
+    link: /minihud/
   - title: Item Scroller
     icon:
       src: /logos/itemscroller-white.svg
@@ -36,17 +36,15 @@ features:
 ---
 
 <style>
-
-body.home .items > .item.grid-4 {
-    width: calc(100% / 5);
-  }
+body.home a.VPFeature img {
+  margin: auto
+}
 
 body.home a.VPFeature h2.title {
-  font-size: 24px;
   margin: auto;
-  padding-top: 20px;
+  font-size: 2em;
   text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-              rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 body.home a.VPFeature[href*="Masa-Wiki"] {
@@ -55,10 +53,11 @@ body.home a.VPFeature[href*="Masa-Wiki"] {
               rgba(0, 0, 0, 0.23) 0px 6px 6px;
   overflow: hidden;
   transition: all .2s ease-in-out;
+  padding-bottom: 16px;
 }
 
 body.home a.VPFeature.link[href*="Masa-Wiki"]:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
   border-color: inherit;
 }
@@ -90,12 +89,12 @@ body.home a.VPFeature.link[href*="tweakeroo"]:hover {
   border: 4px solid var(--vp-c-tweakeroo-dark);
 }
 
-body.home a.VPFeature.link[href*="mini-hud"] {
+body.home a.VPFeature.link[href*="minihud"] {
   border: 4px solid var(--vp-c-minihud-soft);
   color: var(--vp-c-minihud-base);
 }
 
-body.home a.VPFeature.link[href*="mini-hud"]:hover {
+body.home a.VPFeature.link[href*="minihud"]:hover {
   border: 4px solid var(--vp-c-minihud-dark);
 }
 

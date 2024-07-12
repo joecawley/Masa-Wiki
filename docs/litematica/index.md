@@ -8,13 +8,6 @@ hero:
   tagline: Litematica is a client-side schematic mod to help players easily build, create and share their creations. With features such as schematic pasting, area cloning, moving, filling, deletion and much more.
   image: 
      src: 'https://imgur.com/EMRa3V5.png'
-  # actions:
-  #   - theme: brand
-  #     text: Getting Started
-  #     link: litematica/getting-started
-  #   - theme: alt
-  #     text: API Examples
-  #     link: /api-examples
 
 features:
   - icon: 👶
@@ -27,6 +20,6 @@ features:
     link: "./advanced-features/easy-place"
   - icon: 🛠
     title: Configuration
-    details: See all configuration options with description and some exmaples.
+    details: See all configuration options with descriptions and some exmaples.
     link: "./configuration/generic"
 ---

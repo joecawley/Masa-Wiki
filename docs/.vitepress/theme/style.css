@@ -107,6 +107,27 @@ kbd {
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
+body.malilib {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(0deg,var(--vp-c-malilib-dark) 30%, var(--vp-c-malilib-light));
+  --vp-home-hero-image-background-image: radial-gradient(circle, transparent 0% ,transparent 15%, var(--vp-c-malilib-soft) 100%);
+  --vp-home-hero-image-filter: blur(60px);
+
+  --vp-c-brand-3: var(--vp-c-malilib-dark) ;
+  --vp-c-brand-2: var(--vp-c-malilib-base) ;
+  --vp-c-brand-1: var(--vp-c-malilib-light) ;
+  --vp-c-brand-soft: var(--vp-c-malilib-soft);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
 
 body.litematica {
   --vp-home-hero-name-color: transparent;
@@ -118,6 +139,72 @@ body.litematica {
   --vp-c-brand-2: var(--vp-c-litematica-base) ;
   --vp-c-brand-1: var(--vp-c-litematica-light) ;
   --vp-c-brand-soft: var(--vp-c-litematica-soft);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+body.tweakeroo {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(0deg,var(--vp-c-tweakeroo-dark) 30%, var(--vp-c-tweakeroo-light));
+  --vp-home-hero-image-background-image: radial-gradient(circle, transparent 0% ,transparent 15%, var(--vp-c-tweakeroo-soft) 100%);
+  --vp-home-hero-image-filter: blur(60px);
+
+  --vp-c-brand-3: var(--vp-c-tweakeroo-dark) ;
+  --vp-c-brand-2: var(--vp-c-tweakeroo-base) ;
+  --vp-c-brand-1: var(--vp-c-tweakeroo-light) ;
+  --vp-c-brand-soft: var(--vp-c-tweakeroo-soft);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+body.minihud {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(0deg,var(--vp-c-minihud-dark) 30%, var(--vp-c-minihud-light));
+  --vp-home-hero-image-background-image: radial-gradient(circle, transparent 0% ,transparent 15%, var(--vp-c-minihud-soft) 100%);
+  --vp-home-hero-image-filter: blur(60px);
+
+  --vp-c-brand-3: var(--vp-c-minihud-dark) ;
+  --vp-c-brand-2: var(--vp-c-minihud-base) ;
+  --vp-c-brand-1: var(--vp-c-minihud-light) ;
+  --vp-c-brand-soft: var(--vp-c-minihud-soft);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+body.item-scroller {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(0deg,var(--vp-c-itemscroller-dark) 30%, var(--vp-c-itemscroller-light));
+  --vp-home-hero-image-background-image: radial-gradient(circle, transparent 0% ,transparent 15%, var(--vp-c-itemscroller-soft) 100%);
+  --vp-home-hero-image-filter: blur(60px);
+
+  --vp-c-brand-3: var(--vp-c-itemscroller-dark) ;
+  --vp-c-brand-2: var(--vp-c-itemscroller-base) ;
+  --vp-c-brand-1: var(--vp-c-itemscroller-light) ;
+  --vp-c-brand-soft: var(--vp-c-itemscroller-soft);
 
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
