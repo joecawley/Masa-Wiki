@@ -30,12 +30,13 @@ features:
     link: /minihud/
   - title: Item Scroller
     icon:
-      src: /logos/itemscroller-white.svg
+      src: /logos/item-scroller-white.svg
       width: '180'
     link: /item-scroller/
 ---
 
 <style>
+  
 body.home a.VPFeature img {
   margin: auto
 }

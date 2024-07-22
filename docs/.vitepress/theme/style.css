@@ -12,17 +12,42 @@
   z-index: 31;
 }
 
-.vp-doc h1 {
+.dark .vp-doc h1 {
   font-size: 40px;
   color: var(--vp-c-brand-1);
 }
 
-.dark .vp-doc p {
+/* #VPContent > div > div > div.content > div > main > div > div > div.note.custom-block.github-alert > p:nth-child(2) */
+.dark .vp-doc ul,
+.dark .vp-doc li,
+.dark .vp-doc p:not(.custom-block p) {
   color: rgba(255,255,255,0.5);
+}
+
+.dark .vp-doc li > strong {
+  text-decoration: underline;
+}
+
+
+/**
+ * Docs Image Styling
+ * -------------------------------------------------------------------------- */
+
+.zoom-caption {
+  display: grid;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 5px 5px grey;
+  background-image: linear-gradient(90deg, transparent, var(--vp-c-gray-soft) 50%, transparent);
+  color: #fff;
+  padding: 30px 10px;
+  font-size: 32px;
+  z-index: 32;
 }
 
 kbd {
   border: 2px solid grey;
+  border-radius: 3px;
   background-color: lightgray;
   color: black;
   box-shadow: 2px 2px grey;
@@ -35,6 +60,28 @@ kbd {
   white-space: nowrap;
   margin: 0px 5px;
 }
+
+/**
+ * Internal Styling
+ * -------------------------------------------------------------------------- */
+
+.vp-doc .internal-link > a > code {
+  color: var(--vp-c-brand-2);
+}
+
+/**
+ * Minecraft Menu Button Styling
+ * -------------------------------------------------------------------------- */
+
+.vp-doc .menu-name > code {
+  font: 10pt 'Inter', sans-serif;
+  padding: 3px 10px;
+  border: 1px solid var(--vp-c-gray-1);
+  background-color: var(--vp-c-gray-soft);
+  color: var(--vp-c-warning-1);
+  margin: 2px;
+}
+
 
 /**
  * Component: Colours
@@ -50,21 +97,6 @@ kbd {
   --vp-c-brand-2: var(--vp-c-indigo-2);
   --vp-c-brand-3: var(--vp-c-indigo-3);
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
-
-  --vp-c-tip-1: var(--vp-c-brand-1);
-  --vp-c-tip-2: var(--vp-c-brand-2);
-  --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
-
-  --vp-c-warning-1: var(--vp-c-yellow-1);
-  --vp-c-warning-2: var(--vp-c-yellow-2);
-  --vp-c-warning-3: var(--vp-c-yellow-3);
-  --vp-c-warning-soft: var(--vp-c-yellow-soft);
-
-  --vp-c-danger-1: var(--vp-c-red-1);
-  --vp-c-danger-2: var(--vp-c-red-2);
-  --vp-c-danger-3: var(--vp-c-red-3);
-  --vp-c-danger-soft: var(--vp-c-red-soft);
 
   --vp-c-malilib-dark: #fe6111;
   --vp-c-malilib-base: #ff853b;
@@ -260,12 +292,138 @@ body.item-scroller {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: transparent;
-  --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-font-size: 14px;
+  --vp-custom-block-code-font-size: 13px;
+
+  /** #282a2f */
+  --vp-custom-block-info-title: #40444c; /** 800 */
+  --vp-custom-block-info-border: #717986; /** 500 */
+  --vp-custom-block-info-text: #383b42; /** 900 */
+  --vp-custom-block-info-bg: #b6bbc3; /** 300 */
+  --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+
+  /** #0288d1 */
+  --vp-custom-block-note-title: #075785; /** 800 */
+  --vp-custom-block-note-border: #0ea2e9; /** 500 */
+  --vp-custom-block-note-text: #0c496e; /** 900 */
+  --vp-custom-block-note-bg: #7dd1fc; /** 300 */
+  --vp-custom-block-note-code-bg: var(--vp-c-default-soft);
+
+  /** #388e3c */
+  --vp-custom-block-tip-title: #275429; /** 800 */
+  --vp-custom-block-tip-border: #45a249; /** 500 */
+  --vp-custom-block-tip-text: #224525; /** 900 */
+  --vp-custom-block-tip-bg: #9dd89f; /** 300 */
+  --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+
+  /** #ab47bc */
+  --vp-custom-block-important-title: #732c7c; /** 800 */
+  --vp-custom-block-important-border: #c062d3; /** 500 */
+  --vp-custom-block-important-text: #612966; /** 900 */
+  --vp-custom-block-important-bg: #e5b8ef; /** 300 */
+  --vp-custom-block-important-code-bg: var(--vp-c-important-soft);
+
+  /** #f57c00 */
+  --vp-custom-block-caution-title: #a1490b; /** 800 */
+  --vp-custom-block-caution-border: #c5a826; /** 500 */
+  --vp-custom-block-caution-text: #823d0c; /** 900 */
+  --vp-custom-block-caution-bg: #ffd26d; /** 300 */
+  --vp-custom-block-caution-code-bg: var(--vp-c-caution-soft);
+
+  /** #f57c00 */
+  --vp-custom-block-warning-title: #a1490b; /** 800 */
+  --vp-custom-block-warning-border: #c5a826; /** 500 */
+  --vp-custom-block-warning-text: #823d0c; /** 900 */
+  --vp-custom-block-warning-bg: #ffd26d; /** 300 */
+  --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
+
+  /** #d32f2f */
+  --vp-custom-block-danger-title: #932121; /** 800 */
+  --vp-custom-block-danger-border: #e74c4c; /** 500 */
+  --vp-custom-block-danger-text: #7a2222; /** 900 */
+  --vp-custom-block-danger-bg: #f8a9a9; /** 300 */
+  --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
 }
 
+
+/** Component: Custom Block - Dark Mode */
+
+.dark {
+  --vp-custom-block-info-title: #b6bbc3;
+  --vp-custom-block-info-border: #717986;
+  --vp-custom-block-info-text: #edeef1;
+  --vp-custom-block-info-bg: #383b4260;
+  --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+
+  --vp-custom-block-note-title: #7dd1fc; /** 300 */
+  --vp-custom-block-note-border: #0ea2e9; /** 500 */
+  --vp-custom-block-note-text: #e0f2fe; /** 100 */
+  --vp-custom-block-note-bg: #0c496e60; /** 900 */
+  --vp-custom-block-note-code-bg: var(--vp-c-default-soft);
+
+  --vp-custom-block-tip-title: #9dd89f; /** 300 */
+  --vp-custom-block-tip-border: #45a249; /** 500 */
+  --vp-custom-block-tip-text: #e3f5e3; /** 100 */
+  --vp-custom-block-tip-bg: #22452560; /** 900 */
+  --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+
+  --vp-custom-block-important-title: #e5b8ef; /** 300 */
+  --vp-custom-block-important-border: #c062d3; /** 500 */
+  --vp-custom-block-important-text: #f7ecfb; /** 100 */
+  --vp-custom-block-important-bg: #61296660; /** 900 */
+  --vp-custom-block-important-code-bg: var(--vp-c-important-soft);
+
+  --vp-custom-block-caution-title: #ffd26d;
+  --vp-custom-block-caution-border: #ff990a; /** 500 */
+  --vp-custom-block-caution-text: #fff4d3; /** 100 */
+  --vp-custom-block-caution-bg: #823d0c60; 
+  --vp-custom-block-caution-code-bg: var(--vp-c-caution-soft);
+
+  --vp-custom-block-warning-title: #ffd26d;
+  --vp-custom-block-warning-border: #ff990a; /** 500 */
+  --vp-custom-block-warning-text: #fff4d3; /** 100 */
+  --vp-custom-block-warning-bg: #823d0c60; /** 900 */
+  --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
+
+  --vp-custom-block-danger-title: #f8a9a9; /** 300 */
+  --vp-custom-block-danger-border: #e74c4c; /** 500 */
+  --vp-custom-block-danger-text: #fde3e3; /** 100 */
+  --vp-custom-block-danger-bg: #7a222260; /** 900 */
+  --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
+}
+
+.custom-block {
+  border: none;
+  border-left: 10px solid var(--vp-custom-block-info-border);
+}
+
+.info.custom-block .custom-block-title {
+  color: var(--vp-custom-block-info-title);
+}
+
+.note.custom-block .custom-block-title {
+  color: var(--vp-custom-block-note-title);
+}
+
+.tip.custom-block .custom-block-title {
+  color: var(--vp-custom-block-tip-title);
+}
+
+.important.custom-block .custom-block-title {
+  color: var(--vp-custom-block-important-title);
+}
+
+.warning.custom-block .custom-block-title {
+  color: var(--vp-custom-block-warning-title);
+}
+
+.caution.custom-block .custom-block-title {
+  color: var(--vp-custom-block-caution-title);
+}
+
+.danger.custom-block .custom-block-title {
+  color: var(--vp-custom-block-danger-title);
+}
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
@@ -274,3 +432,54 @@ body.item-scroller {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Hover Tooltips
+ * -------------------------------------------------------------------------- */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid var(--vp-c-gray-1); /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 14px;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

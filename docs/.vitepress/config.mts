@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Masa Wiki",
-  description: "All Masa's Mods\nAll In One Place",
+  description: "All Masa's Mods, All In One Place",
   base: '/Masa-Wiki/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -39,8 +39,8 @@ export default defineConfig({
       'litematica/': [
         { text: 'Litematica',
           items: [
-            {text: 'Basic Operations',
-              base: 'litematica/basic-operations/',
+            {text: 'The Basics',
+              base: 'litematica/the-basics/',
               items: [
                 { text: 'Creating Schematics', link: 'creating-schematics' },
                 { text: 'Saving Schematics', link: 'saving-schematics' },

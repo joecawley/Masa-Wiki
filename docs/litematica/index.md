@@ -11,9 +11,9 @@ hero:
 
 features:
   - icon: 👶
-    title: Basic Operations
+    title: The Basics
     details: Learn the basics of creating, saving and loading schematics.
-    link: "./basic-operations/creating-schematics"
+    link: "./the-basics/creating-schematics"
   - icon: 👨‍🎓
     title: Advanced Features
     details: More in-depth tutorials for thos who are well-versed in using Litematica.

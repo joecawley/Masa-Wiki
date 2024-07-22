@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./chunks/framework.BYaJH3C9.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"litematica/installation.md","filePath":"litematica/installation.md"}'),i={name:"litematica/installation.md"};function n(o,s,c,l,r,m){return e(),a("div")}const d=t(i,[["render",n]]);export{_ as __pageData,d as default};
